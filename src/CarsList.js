@@ -12,6 +12,7 @@ const CarsList = () => {
     const [value, onChange] = useState(new Date());
     useEffect(() => {
             carsInfo();
+            // fakeApi();
             CarsImages();
         },[])
         const carsInfo = () => {
@@ -26,6 +27,16 @@ const CarsList = () => {
             console.log(err)
             });
         }
+
+        // const fakeApi = async() => {
+
+        //    await fetch("https://mocki.io/v1/4f7bf80f-e4c8-44c5-9be2-afc649a5af96")
+        //  .then (await response.json());
+
+           
+        //     setCarList(jsonData.data.cars)
+        //     setLoading(true);
+        // }
 
 
  const CarsImages = () => {
@@ -43,12 +54,10 @@ return (
                  <SimpleImageSlider width={300} height = {200} images = {images.map(value => value)} showBullets = {true} className = "img-slider" />
                 <div className="description">
                   <h3>{value.carName}</h3>
-                  <p>{value.carPrice}</p>
+                  <p>Price : {value.carPrice}</p>
                   <p>{value.features}</p>
                  
                 </div>
-          
-
                          
             </div> 
             </>

@@ -8,7 +8,7 @@ function App() {
 
   return(  
     <>
-        <h2>Cars</h2>
+        <h2>CAR SHOW</h2>
       <div className="container">
       <CarsList />
 
